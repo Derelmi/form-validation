@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FILL THIS FORM</title>
+</head>
+
+<body>
+    <form action="register-form">
+        <fieldset >
+            <legend><b>Personal Information</b></legend>
+            <table border="1">
+            <tr>
+                <th>First Name</th>
+                <td><input /></td>
+                <th>Gender</th>
+                <td><label><input type="radio" name="gender"/>Male</label><label><input type="radio" name="gender"/>Female</label></td>
+            </tr>
+            <tr>
+                <th>Last Name</th>
+                <td><input /></td>
+                <th>Nationality</th>
+                <td></label><select>
+                    <option>Canadian</option>
+                    </select></td>
+                </tr>
+            <tr>
+                <th>Address</th>
+                <td colspan="3"><textarea cols="25" rows="5"></textarea></td>
+            </tr>
+        </table>
+    </fieldset>
+    <fieldset>
+        <legend><b>Medical History</b></legend>
+        <label>
+            <input type="checkbox" />Smallpox
+        </label>
+        <label><input type="checkbox" />Mumps</label>
+        <label><input type="checkbox" />Dizziness</label>
+        <label><input type="checkbox" />Sneezing</label>
+    </fieldset>
+    <fieldset>
+        <legend><b>Current Medication</b></legend>
+        <span>Are you currently taking any medication?</span> 
+        <label><input type="radio" name="medicating" />Yes</label><label><input type="radio" name="medicating" />No</label> 
+        <div>If you are currently taking medication, please indicate it in the space below:</div>
+        <textarea cols="90" rows="10"></textarea>
+    </fieldset>
+      <input type="Submit" value="Submit"><input type="Reset" value="Reset">
+    </form>
+</body>
+
+</html>
