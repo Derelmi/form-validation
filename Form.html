@@ -6,52 +6,57 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FILL THIS FORM</title>
-    <script defer src="/Validate_form.js"></script>
+    <script defer src="/validate_form.js"></script>
+    <script defer src="/Validate_form1.js"></script>
 </head>
 
 <body>
     <div id="error"></div>
-    <form action="/" id="register-form" name="myform" method="post" onsubmit="return(validate())">
+    <form action="#" id="register-form" name="myform" method="post" onsubmit="return(validate())">
         <fieldset >
             <legend><b>Personal Information</b></legend>
             <table border="1">
             <tr>
                 <th>First Name</th>
-                <td><input id="fname" type="text" required/></td>
+                <td><input id="firstName" type="text" maxlength="50" required/></td>
                 <th>Gender</th>
-                <td><label><input type="radio" name="gender"/>Male</label><label><input type="radio" name="gender"/>Female</label></td>
+                <td><label><input type="radio" id="male" name="gender"/>Male</label><label><input type="radio" id="female" name="gender"/>Female</label></td>
             </tr>
             <tr>
                 <th>Last Name</th>
-                <td><input id="lname" type="text" required /></td>
+                <td><input id="lastName" type="text" maxlength="50" required /></td>
                 <th>Nationality</th>
                 <td></label><select>
-                    <option>Canadian</option>
+                    <option value="canadian" id="nationality" selected>Canadian</option>
+                    <option value="nigeria">Nigerian</option>
+                    <option value="ghana">Ghanaian</option>
+                    <option value="USA">USA</option>
+                    <option value="none">None</option>
                     </select></td>
                 </tr>
             <tr>
                 <th>Address</th>
-                <td colspan="3"><textarea id="address" cols="25" rows="5"></textarea></td>
+                <td colspan="3"><textarea id="address" class="address"cols="25" rows="5" required></textarea></td>
             </tr>
         </table>
     </fieldset>
     <fieldset>
         <legend><b>Medical History</b></legend>
         <label>
-            <input type="checkbox" />Smallpox
+            <input type="checkbox"  value="small" id="small"/>Smallpox
         </label>
-        <label><input type="checkbox" />Mumps</label>
-        <label><input type="checkbox" />Dizziness</label>
-        <label><input type="checkbox" />Sneezing</label>
+        <label><input type="checkbox" value="mump" id="mump" />Mumps</label>
+        <label><input type="checkbox" value="dizzy" id="dizzy" />Dizziness</label>
+        <label><input type="checkbox" value="sneeze" id="sneeze" />Sneezing</label>
     </fieldset>
     <fieldset>
         <legend><b>Current Medication</b></legend>
         <span>Are you currently taking any medication?</span> 
-        <label><input type="radio" name="medicating" />Yes</label><label><input type="radio" name="medicating" />No</label> 
+        <label for="yes"><input type="radio" name="medicating"  value="yes" id="yes" checked class="treat"/>Yes</label><label for="no"><input type="radio" name="medicating"  id="No" value="no" class="treat"/>No</label> 
         <div>If you are currently taking medication, please indicate it in the space below:</div>
-        <textarea cols="90" rows="10"></textarea>
+        <textarea cols="90" rows="10" class="response" id="response"></textarea>
     </fieldset>
-      <input type="Submit" value="Submit"><input type="Reset" value="Reset">
+      <input type="Submit" value="Submit"><input id="reset" type="Reset" value="Reset">
     </form>
 </body>
 
